@@ -1,6 +1,6 @@
 # robofriends-testing
 
-[![JacobGrisham](https://circleci.com/pipelines/github/JacobGrisham/CircleCI.svg?style=svg)](https://app.circleci.com/pipelines/github/JacobGrisham/CircleCI)
+[![JacobGrisham](https://circleci.com/gh/JacobGrisham/CircleCI.svg?style=svg)](https://app.circleci.com/pipelines/github/JacobGrisham/CircleCI)
 
 To run the project:
 
