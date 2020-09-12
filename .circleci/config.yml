@@ -5,7 +5,7 @@ jobs:
       - image: circleci/node:8.9
     steps:
       - checkout
-      - run: echo "It's working"
+      - run: echo "It's working!"
   build:
     docker:
       - image: circleci/node:8.9
@@ -19,23 +19,23 @@ jobs:
       - image: circleci/node:8.9
     steps:
       - checkout
-      - run: echo "testing stuff"
+      - run: echo "Wait for prerequisite to run, then will run 'npm test'"
       - run: npm install
       - run: npm test
-  hithere:
+  prerequisite:
     docker:
       - image: circleci/node:8.9
     steps:
       - checkout
-      - run: echo "hellllooooo!"
+      - run: echo "Meaningless job, but proves a point."
 workflows:
   version: 2
   build_test_and_lint:
     jobs:
       - hello
       - build
-      - hithere
+      - prerequisite
       - test:
           requires:
-            - hithere
+            - prerequisite
 
